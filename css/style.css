@@ -1,68 +1,262 @@
-body {
-    background-color: #030503;
+body{
+    background-image: url(media/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main {
+    padding: 20px;
+    background-color: rgba(215, 255, 217, 0.7);
+}
+
+/*INICIO*/
+
+.inicio {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-size: 15px;
+    color: rgb(255, 0, 0);
     box-sizing: border-box;
+    padding: 149px;
 }
-html {
-    scroll-behavior: smooth;
+
+.section {
+    display: flex;
 }
-header {
-    background-color: #006809; 
-    height: 80px;
-    color: #fff; 
-    font-size: 22px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.sec1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-flow: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.sec2 {
+    padding: 50px;
+    display: flex;
+    flex-wrap: initial;
+    justify-content: flex-start;
+    align-items: normal;
+    width: 100%;
+    height: 100%;
+}
+
+.caja {
+    height: 100%;
+    width: 92%;
+    border: 2px solid #ba0000;
+}
+
+.caja1 {
+    line-height: 20px;
+    text-align: start;
+    width: 420px;
+    height: 220px;
+}
+
+.caja img {
+    max-width: 100%; 
+    max-height: 300px; 
+    object-fit: cover;
+}
+
+/* RESPONSIVE móvil */
+@media (max-width: 768px) {
+    .sec1 {
+        flex-direction: row; 
+        align-items: flex-start; 
+    }
+
+    .sec2 {
+        padding: 20px; 
+    }
+
+    .caja {
+        width: 100%;
+        margin-bottom: 20px; 
+    }
+}
+
+
+/* PERFIL */
+.main {
+    background-color: #d7ffd9;
     padding: 20px;
 }
-.barra{
-    float: right;
+
+.datos {
+    display: grid;
+    grid-template-columns: auto auto; 
+    gap: 20px;
 }
-.barra ul li{
-list-style: none;
-display: inline-block;
+
+.imgPerfil {
+    grid-column: 2; 
+    justify-self: end; 
+}
+
+.imgPerfil img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid #ba0000;
+}
+
+.name p,
+.juegosFav p,
+.reseñasHechas p {
+    text-align: left; 
+}
+
+.juegosFav {
+    grid-column: 1 / -1; 
+}
+
+.imgJuegoFav {
+    justify-self: start; 
+}
+
+.imgJuegoFav img {
+    width: 350px;
+    height: 350px;
+    border-radius: 20%;
+    border: 2px solid #ba0000;
+}
+
+.reseñasHechas {
+    margin-top: 20px;
+    grid-column: 1 / -1; 
+    text-align: left; 
+}
+/* RESPONSIVE movile */
+@media (max-width: 768px) {
+    .datos {
+        grid-template-columns: 1fr; 
+    }
+
+    .imgPerfil {
+        grid-column: 1; 
+        justify-self: start; 
+    }
+
+    .imgPerfil img {
+        width: 100%; 
+        max-width: 180px; 
+        height: auto; 
+    }
+
+    .juegosFav {
+        grid-column: 1 / -1; 
+    }
+
+    .imgJuegoFav {
+        justify-self: start; 
+    }
+
+    .imgJuegoFav img {
+        width: 100%; 
+        max-width: 350px; 
+        height: auto; 
+    }
+
+    .reseñasHechas {
+        margin-top: 20px; 
+    }
+}
+
+
+/*RESEÑAS*/
+
+.reseñas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.item {
+    border: 3px solid #ba0000;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: relative; 
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     
 }
-.barra a{
-    text-decoration: none;
-    color: #fff;
-}
-.barra a:hover{
-    color: #030503;/*cada vez que me posicione cambia el color*/
-}
-.logo{
-    color: #ffffff;
-}
-.logo span{
-    color: #ba0000;
-    font-weight: bold;
-}
-main{
-    height: 100vh;
+
+.item p {
+    position: absolute; 
+    bottom: 0; 
     width: 100%;
-    background-color: #00550a;  
-    background-image: url(../media/fondo.jpg);
-    background-size: cover;
-    background-position: left;
-}
-section {
-    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #006809;
-    justify-content: center;
-    align-items: center;
 
+/* RESPONSIVE movile */
+@media (max-width: 768px) {
+    .reseñas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item {
+        height: auto; 
+    }
+
+    .item img {
+        height: auto; 
+    }
+    p{
+        font-size: 15px;
+    }
 }
+
+
+/* NOTICIAS */
+
+#paginaNoticias {
+    position: absolute;
+    width: 100%;
+    height: 81%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    background-color: #006809 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.bg-primary {
+    background-color: #006809 !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
 .redes {
     text-decoration: none;
     padding: 20px;
@@ -73,9 +267,11 @@ footer {
     width: 25px;
     border-radius: 50%;
 }
+
 .redes:hover {
     color: #000000;
 }
+
 .subir {
     background-color: rgb(0, 31, 145);
     color: #fff;
@@ -91,172 +287,7 @@ footer {
     box-shadow: 0 0 5px 2px red;
 }
 
-li.active{
-    background-color: white;
-}
-
-li.active a{
-    color:black;
-}
-
-img.epic{   
+img.epic {
     width: 38.75px;
     height: 41.66px;
-}
-
-/* #reseñas{
-    color: black;
-    padding: 149px;
-    padding-bottom: 51px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-    padding-bottom: 50px;
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    text-align: start;
-} */
-#enviar{
-    position: absolute;
-    top: 70%;
-    left: 60%;
-    
-}
-/*INICIO*/
-
-.inicio{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    color: white;
-    box-sizing: border-box;
-    padding: 149px;
-    padding-bottom: 51px;
-}
-.section{
-    display: flex;
-}
-.sec1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-flow: row ;
-    justify-content: center;
-    align-items: baseline;
-}
-.caja{
-    max-width: 300px;
-    height: 120px;
-    width: 120px;
-    background-color: #000000;
-    color: #ba0000;
-    border: 3px solid #ba0000;
-    text-align: center;
-    font-size: 20px;
-    text-transform: uppercase;
-    line-height: 120px;
-}
-.caja1{
-    line-height: 20px;
-}
-
-/* PERFIL */
-
-.perfil{
-    background-color: #0068096c;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-    width: 100%;
-    height: 100%;
-    padding-left: 30px;
-    color: white;
-    text-align: left;
-}
-p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    box-sizing: border-box;
-    font-size: 20px;
-
-}
-.itemm{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    color: white;
-    box-sizing: border-box;
-    padding: 1px;
-}
-
-.fotoperfil{
-    width: 200px;
-    height: 200px;
-    float: right;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-}
-
-.juegoFav{
-    width: 200px;
-    height: 200px;
-    border-radius: 10%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-}
-
-
-/*RESEÑAS*/
-.reseñas{
-    background-color: #00550a;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    grid-gap: 20px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    text-align: flex;
-
-}
-.item{
-    border: 3px solid #ba0000;
-    background-size: cover;
-    background-position: center;
-    
-}
-.item1{
-    background-image: url(../media/assistant.png);
-
-}
-.item2{
-    background-image: url(../media/valorant.jpg);
-}
-.item3{
-    background-image: url(../media/overwatch.jpg);
-}
-.item4{
-    background-image: url(../media/wow.jpg);
-}
-.item5{
-    background-image: url(../media/phasmophobia.jpg);
-}
-.item6{
-    background-image: url(../media/massEffect.jpg);
-}
-p {
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
-}
-
-
-/* NOTICIAS */
-#paginaNoticias{
-    position: absolute;
-    width: 100%;
-    height: 81%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    color: white;
-    box-sizing: border-box;
 }
