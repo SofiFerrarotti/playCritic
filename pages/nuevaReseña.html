@@ -10,7 +10,7 @@
     </head>
     <body>
     <header>     
-        <div class="logo"><span>LOGO🎮</span></div>
+        <div class="logo"><span>PLAYCRITIC🎮</span></div>
         <nav class="barra navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,13 +38,23 @@
             </div>
         </nav>
     </header>
-        <main>
-            <div class="contenedor"></div>
-                <div>
-                    <textarea name="Reseñas" id="reseñas" cols="30" rows="10"></textarea>
-                    <input type="submit" value="Enviar" id="enviar">
+    <main>
+        <h1>Nueva reseña</h1>
+        <div class="contenedor">
+            <div class="item">
+                <label for="juego">Juego</label>
+                <input type="text" name="juego" id="juego">
+                <label for="consola">Consola</label>
+                <input type="text" name="consola" id="consola">
+                <input type="file" name="imagen" id="imagen">
             </div>
-        </main>
+            <div class="item2">
+                <label for="comentario">Reseña</label>
+                <textarea name="Reseñas" id="comentario" cols="30" rows="10"></textarea>
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </main>
 <footer class="bg-dark text-white text-center py-3">
             <a href="https://steamcommunity.com/id/Labarbademerlin/" class="redes">
                 <i class="fab fa-steam"></i>

@@ -21,6 +21,42 @@ main {
 .section {
     display: flex;
 }
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: rotateY(0);
+}
+.text p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 .sec1 {
     display: flex;
@@ -55,25 +91,25 @@ main {
 }
 
 .caja img {
-    max-width: 100%; 
-    max-height: 300px; 
+    max-width: 100%;
+    max-height: 300px;
     object-fit: cover;
 }
 
-/* RESPONSIVE móvil */
+/* Responsivo movile */
 @media (max-width: 768px) {
     .sec1 {
-        flex-direction: row; 
-        align-items: flex-start; 
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     .sec2 {
-        padding: 20px; 
+        padding: 20px;
     }
 
     .caja {
         width: 100%;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
 }
 
@@ -165,63 +201,68 @@ main {
 }
 
 
-/*RESEÑAS*/
-
+/* RESEÑAS */
 .reseñas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    position: relative;
-    padding: 20px;
-    box-sizing: border-box;
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px;
 }
 
 .item {
-    border: 3px solid #ba0000;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    position: relative; 
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: rotateY(-180deg);
+}
+
+.item:hover .overlay {
+    opacity: 1;
+    transform: rotateY(0);
 }
 
 .item img {
+    transition: transform 0.7s;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+    height: auto;
 }
 
-.item p {
-    position: absolute; 
-    bottom: 0; 
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.7);
+.item:hover img {
+    transform: rotateY(180deg);
 }
-
 
 /* RESPONSIVE movile */
 @media (max-width: 768px) {
     .reseñas {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto; 
     }
 
     .item {
-        height: auto; 
+        height: auto;
     }
 
     .item img {
-        height: auto; 
+        height: auto;
     }
-    p{
+
+    p {
         font-size: 15px;
     }
 }
-
 
 /* NOTICIAS */
 
@@ -290,4 +331,47 @@ main {
 img.epic {
     width: 38.75px;
     height: 41.66px;
+}
+
+/*Nuevas Reseñas*/
+.contenedor {
+    /* display: flex; */
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.item2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.item input,
+.item2 textarea {
+    width: 100%;
+    border: none; 
+}
+
+/* RESPONSIVE movile */
+@media (max-width: 768px) {
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
 }
