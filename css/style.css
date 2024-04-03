@@ -126,9 +126,13 @@ main {
     gap: 20px;
 }
 
+.sect {
+    grid-column: 1 / span 1; 
+}
+
 .imgPerfil {
-    grid-column: 2; 
     justify-self: end; 
+    align-self: start;
 }
 
 .imgPerfil img {
@@ -138,32 +142,16 @@ main {
     border: 2px solid #ba0000;
 }
 
-.name p,
-.juegosFav p,
-.reseñasHechas p {
-    text-align: left; 
-}
-
-.juegosFav {
-    grid-column: 1 / -1; 
-}
-
 .imgJuegoFav {
-    justify-self: start; 
+    grid-column: 1 / span 2; 
 }
 
 .imgJuegoFav img {
-    width: 350px;
-    height: 350px;
-    border-radius: 20%;
-    border: 2px solid #ba0000;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 }
 
-.reseñasHechas {
-    margin-top: 20px;
-    grid-column: 1 / -1; 
-    text-align: left; 
-}
 /* RESPONSIVE movile */
 @media (max-width: 768px) {
     .datos {
@@ -171,7 +159,6 @@ main {
     }
 
     .imgPerfil {
-        grid-column: 1; 
         justify-self: start; 
     }
 
@@ -181,12 +168,8 @@ main {
         height: auto; 
     }
 
-    .juegosFav {
-        grid-column: 1 / -1; 
-    }
-
     .imgJuegoFav {
-        justify-self: start; 
+        grid-column: 1 / span 1; 
     }
 
     .imgJuegoFav img {
@@ -194,10 +177,10 @@ main {
         max-width: 350px; 
         height: auto; 
     }
-
-    .reseñasHechas {
-        margin-top: 20px; 
-    }
+}
+.negrita {
+    font-weight: bold;
+    color: #ba0000;
 }
 
 
