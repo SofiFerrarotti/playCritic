@@ -13,9 +13,11 @@ main {
 }
 
 /* Sección de juegos populares */
-.popularGames{
-  text-align: center;
-  padding-top: 10%;
+.populares{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
 }
 .sec2 {
   padding: 120px;
@@ -25,25 +27,27 @@ main {
 }
 
 .caja {
-  width: calc(100% - 30px);
-  margin-bottom: 100%;
+  position: relative;
+  overflow: hidden;
   border: 2px solid #ba0000;
 }
 
 .caja img {
   width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  height: auto;
 }
 
 /* Responsivo móvil */
 @media (max-width: 768px) {
-  .sec2 {
-    padding: 100%;
-    justify-content: center;
+  .populares {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
   .caja {
-    width: calc(50% - 20px);
+    height: auto;
+  }
+  .caja img {
+    height: auto;
   }
 }
 
