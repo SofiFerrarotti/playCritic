@@ -1,127 +1,286 @@
-@charset "UTF-8";
-
-// Importar Bootstrap
-@import "~bootstrap/scss/bootstrap";
-
-// Estilos específicos adicionales
-body {
-  background-size: cover;
-  background-position: center;
+@charset {
+	"UTF-8"; {
+		body {
+			background-size: cover;
+			background-position: center;
+		}
+	}
 }
-
-.main {
-  padding: 20px;
-  background-color: rgba(215, 255, 217, 0.7);
+main {
+	padding: 20px;
+	background-color: rgba(215, 255, 217, 0.7);
 }
-
 .inicio {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  color: rgb(255, 0, 0);
-  box-sizing: border-box;
-  padding: 149px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 15px;
+	color: rgb(255, 0, 0);
+	box-sizing: border-box;
+	padding: 149px;
 }
-
 .section {
-  display: flex;
+	display: flex;
 }
-
 .image-container {
-  position: relative;
+	position: relative;
+	&:hover {
+		.overlay {
+			opacity: 1;
+			transform: rotateY(0);
+		}
+	}
 }
-
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  transform: rotateY(0);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	transform: rotateY(0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	transform: rotateY(-180deg);
 }
-
-.text p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 13px;
-  color: rgb(253, 253, 253);
-  text-align: center;
-}
-
-.image-container:hover .overlay {
-  opacity: 1;
-  transform: rotateY(0);
-}
-
 .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	p {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 15px;
+		color: white;
+		text-align: center;
+	}
 }
-
 .sec1 {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  flex-flow: row;
-  justify-content: center;
-  align-items: baseline;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex-flow: row;
+	justify-content: center;
+	align-items: baseline;
 }
-
 .sec2 {
-  padding: 50px;
-  display: flex;
-  flex-wrap: initial;
-  justify-content: flex-start;
-  align-items: normal;
-  width: 100%;
-  height: 100%;
+	padding: 50px;
+	display: flex;
+	flex-wrap: initial;
+	justify-content: flex-start;
+	align-items: normal;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
 }
-
 .caja {
-  height: 100%;
-  width: 92%;
-  border: 2px solid #ba0000;
+	height: 100%;
+	width: 92%;
+	border: 2px solid #ba0000;
+	width: 100%;
+	margin-bottom: 20px;
+	img {
+		max-width: 100%;
+		max-height: 300px;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
 }
-
 .caja1 {
-  line-height: 20px;
-  text-align: start;
-  width: 420px;
-  height: 220px;
+	line-height: 20px;
+	text-align: start;
+	width: 420px;
+	height: 220px;
 }
-
-.caja img {
-  max-width: 100%;
-  max-height: 300px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-// Estilos responsivos
-@media (max-width: 768px) {
-  .sec1 {
+@media {
+	(max-width {
+		&: {
+			768px) {
+				.sec1 {
     flex-direction: row;
-    align-items: flex-start;
-  }
-  .sec2 {
-    padding: 20px;
-  }
-  .caja {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+				align-items: flex-start;
+				.datos {
+    grid-template-columns: 1fr;
+				.reseñas {
+    grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: auto;
+				.contenedor {
+    display: flex;
+				flex-direction: column;
+			}
+		}
+	}
 }
-
-// Estilos para el pie de página
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+} {
+	.main {
+		background-color: #d7ffd9;
+		padding: 20px;
+	}
+	.negrita {
+		font-weight: bold;
+		color: #ba0000;
+	}
+	#paginaNoticias {
+		position: absolute;
+		width: 100%;
+		height: 81%;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 15px;
+		color: white;
+		box-sizing: border-box;
+	}
+}
+.datos {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 20px;
+}
+.sect {
+	grid-column: 1/span 1;
+}
+.imgPerfil {
+	justify-self: end;
+	align-self: start;
+	justify-self: start;
+	img {
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+		border: 2px solid #ba0000;
+		width: 100%;
+		max-width: 180px;
+		height: auto;
+	}
+}
+.imgJuegoFav {
+	grid-column: 1/span 2;
+	grid-column: 1/span 1;
+	img {
+		width: 100%;
+		max-width: 350px;
+		height: auto;
+		width: 100%;
+		max-width: 350px;
+		height: auto;
+	}
+}
+.reseñas {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	gap: 20px;
+}
+.item {
+	position: relative;
+	overflow: hidden;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	&:hover {
+		.overlay {
+			opacity: 1;
+			transform: rotateY(0);
+		}
+		img {
+			transform: rotateY(180deg);
+		}
+	}
+	img {
+		transition: transform 0.7s;
+		width: 100%;
+		height: auto;
+		height: auto;
+	}
+}
+p {
+	font-size: 15px;
+}
+.navbar {
+	background-color: #006809 !important;
+}
+.navbar-light {
+	.navbar-nav {
+		.nav-link {
+			color: white !important;
+		}
+	}
+}
+.bg-primary {
+	background-color: #006809 !important;
+}
+.text-white {
+	color: white !important;
+}
+.py-3 {
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
+}
+.redes {
+	text-decoration: none;
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+	color: #ffffff;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	&:hover {
+		color: #000000;
+	}
+}
+.subir {
+	background-color: rgb(0, 31, 145);
+	color: #fff;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	font-size: 25px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px 2px red;
+}
+img {
+	&.epic {
+		width: 38.75px;
+		height: 41.66px;
+	}
+}
+.contenedor {
+	flex-direction: column;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 100%;
+}
+.main {
+	width: 100%;
+	height: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+.item2 {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+.item input,
+.item2 textarea {
+	width: 100%;
+	border: none;
 }
