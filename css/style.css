@@ -299,7 +299,7 @@ img.epic {
   margin: 0;
 }
 
-main {
+.noticias {
   flex: 1; 
   display: flex;
   justify-content: center; 
