@@ -44,15 +44,15 @@
         <h1>Nueva reseña</h1>
         <div class="contenedor">
             <div class="item">
-            <label for="juego">Juego</label>
-            <input type="text" name="juego" id="juego">
-            <label for="consola">Consola</label>
-            <input type="text" name="consola" id="consola">
+                <h3>Juego</h3>
+                <input type="text" id="Juego" required minlength="4" maxlength="18" size="10" />
+            <h3>Consola</h3>
+            <input type="text" id="consola" required minlength="4" maxlength="8" size="10" />
             <input type="file" name="imagen" id="imagen">
         </div>
         <div class="item2">
-            <label for="comentario">Reseña</label>
-            <textarea name="Reseñas" id="comentario" cols="30" rows="10"></textarea>
+            <h3>Reseña</h3>
+            <textarea name="reseñasArea" id="comentario" cols="30" rows="10"></textarea>
             <input type="submit" value="Enviar">
         </div>
     </div>
