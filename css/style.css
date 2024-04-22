@@ -13,15 +13,19 @@ main {
 }
 
 /* Sección de juegos populares */
+.popularGames{
+  text-align: center;
+  padding-top: 10%;
+}
 .sec2 {
-  padding: 20px;
+  padding: 120px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .caja {
-  width: calc(33.33% - 20px);
+  width: calc(100% - 30px);
   margin-bottom: 100%;
   border: 2px solid #ba0000;
 }

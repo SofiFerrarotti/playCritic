@@ -1,2 +1,4 @@
 En cuanto a SEO implementé :
 En cuanto a imagenes mejoré la calidad pasandolas a png (antes estaban en jpg)
+Los titulos estan ordenados con h1 y h2 segun corresponde.
+Los parrafos estan escritos correctamente,sin faltas de ortografía y de manera que se entienden bien.
