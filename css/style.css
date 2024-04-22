@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+.logo{
+  font-family: 'Segoe UI', Tahoma;
+  color: greenyellow;
+}
 /* Estilos generales */
 body {
   background-size: cover;
@@ -54,24 +57,19 @@ main {
 /* Header */
 header {
   background-color: #006809;
-}
-
-.navbar {
-  background-color: #006809 !important;
-}
-
-.navbar-toggler-icon {
   color: white;
-}
-
-.navbar-nav .nav-link {
-  color: white !important;
+  padding: 8px;
+  display: flex;
 }
 
 .nav-link:hover {
-  color: #ffffff !important;
+  color: #c70000 !important;
 }
 
+.nav-item.active .nav-link {
+  background-color: #c70000; 
+  color: rgb(255, 255, 255); 
+}
 /* Footer */
 footer {
   background-color: #006809;
