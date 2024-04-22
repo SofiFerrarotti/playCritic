@@ -202,7 +202,9 @@ img.epic {
 
 .imgPerfil {
   justify-self: end;
-  align-self: start;
+  align-self: center;
+  grid-column: 2/span 1;
+  /* align-self: start; */
 }
 
 .imgPerfil img {
