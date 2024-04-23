@@ -11,60 +11,21 @@ main {
 }
 
 /* Sección de juegos populares */
-.populares{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-}
-.sec2 {
+.populares {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
+  justify-content: center;
 }
 
 .caja {
-  position: relative;
-  overflow: hidden;
-  border: 1.5px solid #ba0000;
-  width: auto;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-  height: auto;
+  flex: 1 1 200px; 
+  margin: 10px;
 }
 
 .caja img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; 
 }
-
-/* Responsivo móvil */
-@media (max-width: 768px) {
-  .populares {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  .caja {
-    height: auto;
-  }
-  .caja img {
-    height: auto;
-  } 
-  .sec2 {
-    padding: 20px;
-  }
-  .caja1 {
-    line-height: 20px;
-    text-align: start;
-  }
-}
-
 /* Header */
 header {
   background-color: #006809;
@@ -329,9 +290,6 @@ img.epic {
   }
   .item img {
     height: auto;
-  }
-  p {
-    font-size: 15px;
   }
 }
 
