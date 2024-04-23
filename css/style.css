@@ -3,12 +3,12 @@
   font-family: 'Segoe UI', Tahoma;
   color: greenyellow;
 }
-/* Estilos generales */
+/* Estilos generales
 body {
   background-size: cover;
   background-position: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+} */
 
 main {
   padding: 20px;
@@ -181,6 +181,21 @@ img.epic {
   text-align: start;
   width: 420px;
   height: 220px;
+}
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+  .caja1 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .text {
+    font-size: 15px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* PERFIL */
