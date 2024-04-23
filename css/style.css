@@ -3,12 +3,7 @@
   font-family: 'Segoe UI', Tahoma;
   color: greenyellow;
 }
-/* Estilos generales
-body {
-  background-size: cover;
-  background-position: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-} */
+/* Estilos generales */
 
 main {
   padding: 20px;
@@ -34,7 +29,7 @@ main {
 .caja {
   position: relative;
   overflow: hidden;
-  border: 1px solid #ba0000;
+  border: 1.5px solid #ba0000;
   width: auto;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -45,7 +40,7 @@ main {
 
 .caja img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -258,6 +253,27 @@ img.epic {
   font-weight: bold;
   color: #ba0000;
 }
+/*Movile*/
+@media (max-width: 768px) {
+  .datos {
+    grid-template-columns: auto;
+  }
+  .sect {
+    grid-column: 1/span 1;
+  }
+  .imgJuegoFav {
+    grid-column: 1/span 1;
+  }
+  .imgJuegoFav img {
+    width: 100%;
+  }
+  .imgPerfil {
+    grid-column: 1/span 1;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
 
 /* RESEÑAS */
 .reseñas {
