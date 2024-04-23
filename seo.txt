@@ -1,3 +1,9 @@
+PlayCritic es una pagina tipo red social donde cada persona puede mostrar:
+ sus ultimas reseñas de videojuegos,
+ su perfil con información sobre el jugador,
+ una sección para crear nuevas reseñas,
+ una sección de noticias que esta enlasada a una pagina externa de noticias sobre videojuegos.
+
 En cuanto a SEO implementé :
 En cuanto a imagenes mejoré la calidad pasandolas a png (antes estaban en jpg)
 Los titulos estan ordenados con h1 y h2 segun corresponde.
